@@ -13,7 +13,8 @@ router = Router()
 async def command_start(message: Message):
     # text = settings["startup_message"].format(id=id)
     await message.answer(
-        f"Ку"
+        f'Главное меню:',
+        reply_markup=kb.main_menu(message.from_user.id).as_markup()
     )
 
 
